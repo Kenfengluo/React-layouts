@@ -5,8 +5,8 @@ import Dashboard from './dashboard/Dashboard';
 import Checkout from './checkOut/Checkout';
 import AuthorQuiz from './authorQuiz/AuthorQuiz';
 
-const App = () => (
-  <AuthorQuiz />
+const App = (props) => (
+  <AuthorQuiz  turnData = {props.turnData}/>
 );
 
 export default App;
