@@ -1,12 +1,21 @@
-import React from 'react';
-import 'typeface-roboto';
-import SignIn from './signIn/signIn';
-import Dashboard from './dashboard/Dashboard';
-import Checkout from './checkOut/Checkout';
-import AuthorQuiz from './authorQuiz/AuthorQuiz';
+import React  from 'react';
+import PropTypes from 'prop-types';
+import {Link} from 'react-router';
+import Header from './common/Header';
 
-const App = (props) => (
-  <AuthorQuiz  turnData = {props.turnData}/>
-);
+class App extends React.Component {
+  render() {
+    return (
+      <div className="container-fluid">
+        <Header/>
+        {this.props.children}
+      </div>
+    )
+  }
+}
+
+App.propTypes = {
+  children: PropTypes.object.isRequired
+};
 
 export default App;
